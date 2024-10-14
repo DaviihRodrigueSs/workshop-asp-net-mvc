@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using SalesWebMvc.Models;
+using SalesWebMvc.Views.Home;
 using System.Diagnostics;
 
 namespace SalesWebMvc.Controllers
@@ -15,6 +16,7 @@ namespace SalesWebMvc.Controllers
 
         public IActionResult Index()
         {
+            ViewData["Message"] = "Sales Web MVC App from C# ";
             return View();
         }
 
