@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# IDE0320: Tornar a função anônima estática
+csharp_prefer_static_anonymous_function = true
