@@ -7,6 +7,29 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\NovaPasta1\**" />
+    <Compile Remove="Views\NovaPasta\**" />
+    <Compile Remove="Views\Sellers1\**" />
+    <Compile Remove="Views\Sellers\**" />
+    <Compile Remove="Views\se\**" />
+    <Content Remove="Views\NovaPasta1\**" />
+    <Content Remove="Views\NovaPasta\**" />
+    <Content Remove="Views\Sellers1\**" />
+    <Content Remove="Views\Sellers\**" />
+    <Content Remove="Views\se\**" />
+    <EmbeddedResource Remove="Views\NovaPasta1\**" />
+    <EmbeddedResource Remove="Views\NovaPasta\**" />
+    <EmbeddedResource Remove="Views\Sellers1\**" />
+    <EmbeddedResource Remove="Views\Sellers\**" />
+    <EmbeddedResource Remove="Views\se\**" />
+    <None Remove="Views\NovaPasta1\**" />
+    <None Remove="Views\NovaPasta\**" />
+    <None Remove="Views\Sellers1\**" />
+    <None Remove="Views\Sellers\**" />
+    <None Remove="Views\se\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="Views\Home\_Layout.cshtml" />
   </ItemGroup>
 
