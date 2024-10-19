@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using SalesWebMvc.Data;
 using SalesWebMvc.Models;
 using System.Globalization;
+using SalesWebMvc.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,7 @@ builder.Services.AddDbContext<SalesWebMvcContext>(options =>
 
 // Registro do SeedingService no contêiner de dependências
 builder.Services.AddScoped<SeedingService>();
+builder.Services.AddScoped<SellerService>();
 
 // Adicionando os serviços MVC ao contêiner
 builder.Services.AddControllersWithViews();
@@ -22,12 +24,12 @@ builder.Services.AddControllersWithViews();
 var app = builder.Build();
 
 // Configuração de Cultura
-var enUS = new CultureInfo("en-US");
+var ptBR = new CultureInfo("pt-BR");
 var localizationOptions = new RequestLocalizationOptions
 {
-    DefaultRequestCulture = new RequestCulture(enUS),
-    SupportedCultures = new List<CultureInfo> { enUS },
-    SupportedUICultures = new List<CultureInfo> { enUS }
+    DefaultRequestCulture = new RequestCulture(ptBR),
+    SupportedCultures = new List<CultureInfo> { ptBR },
+    SupportedUICultures = new List<CultureInfo> { ptBR }
 };
 
 app.UseRequestLocalization(localizationOptions);
