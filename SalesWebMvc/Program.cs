@@ -17,6 +17,7 @@ builder.Services.AddDbContext<SalesWebMvcContext>(options =>
 // Registro do SeedingService no contêiner de dependências
 builder.Services.AddScoped<SeedingService>();
 builder.Services.AddScoped<SellerService>();
+builder.Services.AddScoped<DepartmentService>();
 
 // Adicionando os serviços MVC ao contêiner
 builder.Services.AddControllersWithViews();
