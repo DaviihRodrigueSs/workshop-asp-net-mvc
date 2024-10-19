@@ -30,6 +30,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Home\Contact.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Home\Contact.cshtml" />
+    <Content Remove="Views\Home\Index1.cshtml" />
     <Content Remove="Views\Home\_Layout.cshtml" />
   </ItemGroup>
 
