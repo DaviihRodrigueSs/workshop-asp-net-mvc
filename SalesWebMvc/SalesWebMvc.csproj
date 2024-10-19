@@ -30,6 +30,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20241019203010_DepartmentForeignKeyOne.cs" />
+    <Compile Remove="Migrations\20241019203010_DepartmentForeignKeyOne.Designer.cs" />
     <Compile Remove="Views\Home\Contact.cshtml.cs" />
   </ItemGroup>
 
