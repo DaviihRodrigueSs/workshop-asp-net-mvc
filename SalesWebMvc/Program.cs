@@ -25,12 +25,12 @@ builder.Services.AddControllersWithViews();
 var app = builder.Build();
 
 // Configuração de Cultura
-var ptBR = new CultureInfo("pt-BR");
+var enUS = new CultureInfo("en-US");
 var localizationOptions = new RequestLocalizationOptions
 {
-    DefaultRequestCulture = new RequestCulture(ptBR),
-    SupportedCultures = new List<CultureInfo> { ptBR },
-    SupportedUICultures = new List<CultureInfo> { ptBR }
+    DefaultRequestCulture = new RequestCulture(enUS),
+    SupportedCultures = new List<CultureInfo> { enUS },
+    SupportedUICultures = new List<CultureInfo> { enUS }
 };
 
 app.UseRequestLocalization(localizationOptions);
