@@ -49,12 +49,12 @@ namespace SalesWebMvc.Controllers
         {
            if (id == null)
             {
-                return RedirectToAction(nameof(Error), new { messege = "Id not provided" });
+                return RedirectToAction(nameof(Error), new { message = "Id not provided" });
             }
            var obj = _sellerService.FindById(id.Value);
             if (obj == null)
             {
-                return RedirectToAction(nameof(Error), new { messege = "Id not found" });
+                return RedirectToAction(nameof(Error), new { message = "Id not found" });
             }
             return View(obj);
         }
@@ -69,12 +69,12 @@ namespace SalesWebMvc.Controllers
         {
             if (id == null)
             {
-                return RedirectToAction(nameof(Error), new { messege = "Id not provided" });
+                return RedirectToAction(nameof(Error), new { message = "Id not provided" });
             }
             var obj = _sellerService.FindById(id.Value);
             if (obj == null)
             {
-                return RedirectToAction(nameof(Error), new { messege = "Id not found" });
+                return RedirectToAction(nameof(Error), new { message = "Id not found" });
             }
             return View(obj);
         }
@@ -82,12 +82,12 @@ namespace SalesWebMvc.Controllers
         {
             if (id == null)
             {
-                return RedirectToAction(nameof(Error), new { messege = "Id not provided" });
+                return RedirectToAction(nameof(Error), new { message = "Id not provided" });
             }
             var obj = _sellerService.FindById(id.Value);
             if (obj == null)
             {
-                return RedirectToAction(nameof(Error), new { messege = "Id not found" });
+                return RedirectToAction(nameof(Error), new { message = "Id not found" });
             }
 
             List < Department >  departments = _departmentService.FindAll();
@@ -106,7 +106,7 @@ namespace SalesWebMvc.Controllers
             }
             if (id != seller.Id)
             {
-                return RedirectToAction(nameof(Error), new { messege = "Id mismatch" }); //Id não corresponde
+                return RedirectToAction(nameof(Error), new { message = "Id mismatch" }); //Id não corresponde
             }
             try
             {
@@ -115,14 +115,14 @@ namespace SalesWebMvc.Controllers
             }
             catch (ApplicationException e)
             {
-                return RedirectToAction(nameof(Error), new { messege = e.Message});
+                return RedirectToAction(nameof(Error), new { message = e.Message});
             }
         }
-        public IActionResult Error(string messege)
+        public IActionResult Error(string message)
         {
             var viewModel = new ErrorViewModel
             {
-                Messege = messege,
+                Message = message,
                 RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
             };
             return View(viewModel);
