@@ -35,7 +35,8 @@ namespace SalesWebMvc.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(Seller seller)
         {
-            if (!ModelState.IsValid)
+            Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary modelState = ModelState;
+            if (!modelState.IsValid)
             {
                 var departments = _departmentService.FindAll();
                 var viewModel = new SellerFormViewModel { Seller = seller, Departments = departments };

@@ -27,12 +27,14 @@ namespace SalesWebMvc.Models
         [Required(ErrorMessage = "{0} required")]
         [Range(100.00, 50000.0 , ErrorMessage ="{0} must be from {1} to {2}")]
         public double BaseSalary { get; set; }
+        public Department?  Department { get; set; }
 
-        public Department Department { get; set; }
+        [Required(ErrorMessage = "Department is required")]
         public int DepartmentId { get; set; }
+
         public ICollection<SalesRecord> Sales { get; set; } = new List<SalesRecord>();
 
-        public Seller() 
+        public  Seller() 
         { 
         }
 
